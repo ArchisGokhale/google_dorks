@@ -1,0 +1,175 @@
+inurl /bug bounty
+inurl : / security
+inurl:security.txt
+inurl:security "reward"
+inurl : /responsible disclosure
+inurl : /responsible-disclosure/ reward
+inurl : / responsible-disclosure/ swag
+inurl : / responsible-disclosure/ bounty
+inurl:'/responsible disclosure' hoodie
+responsible disclosure swag r=h:com
+responsible disclosure hall of fame
+responsible disclosure europe
+responsible disclosure white hat
+white hat program
+insite:"responsible disclosure" -inurl:nl
+intext responsible disclosure
+site eu responsible disclosure
+site .nl responsible disclosure
+site responsible disclosure
+responsible disclosure:sites
+responsible disclosure r=h:nl
+responsible disclosure r=h:uk
+responsible disclosure r=h:eu
+responsible disclosure bounty r=h:nl
+responsible disclosure bounty r=h:uk
+responsible disclosure bounty r=h:eu
+responsible disclosure swag r=h:nl
+responsible disclosure swag r=h:uk
+responsible disclosure swag r=h:eu
+responsible disclosure reward r=h:nl
+responsible disclosure reward r=h:uk
+responsible disclosure reward r=h:eu
+"powered by bugcrowd" -site:bugcrowd.com
+"submit vulnerability report"
+site:*.gov.* "responsible disclosure"
+intext:"we take security very seriously"
+site:responsibledisclosure.com
+inurl:'vulnerability-disclosure-policy' reward
+intext:Vulnerability Disclosure site:nl
+intext:Vulnerability Disclosure site:eu
+site:*.*.nl intext:security report reward
+site:*.*.nl intext:responsible disclosure reward
+"security vulnerability" "report"
+inurl"security report"
+"responsible disclosure" university
+inurl:/responsible-disclosure/ university
+buy bitcoins "bug bounty"
+inurl:/security ext:txt "contact"
+"powered by synack"
+intext:responsible disclosure bounty
+inurl: private bugbountyprogram
+inurl:/.well-known/security ext:txt
+inurl:/.well-known/security ext:txt intext:hackerone
+inurl:/.well-known/security ext:txt -hackerone -bugcrowd -synack -openbugbounty
+inurl:reporting-security-issues
+inurl:security-policy.txt ext:txt
+site:*.*.* inurl:bug inurl:bounty
+site:help.*.* inurl:bounty
+site:support.*.* intext:security report reward
+intext:security report monetary inurl:security 
+intext:security report reward inurl:report
+site:security.*.* inurl: bounty
+site:*.*.de inurl:bug inurl:bounty
+site:*.*.uk intext:security report reward
+site:*.*.cn intext:security report reward
+"vulnerability reporting policy"
+"van de melding met een minimum van een" -site:responsibledisclosure.nl
+inurl:/security ext:txt "contact"
+inurl:responsible-disclosure-policy
+"If you believe you've found a security vulnerability"
+intext:"BugBounty" and intext:"BTC" and intext:"reward"
+intext:bounty inurl:/security
+inurl:"bug bounty" and intext:"€" and inurl:/security
+inurl:"bug bounty" and intext:"$" and inurl:/security
+inurl:"bug bounty" and intext:"INR" and inurl:/security
+inurl:/security.txt "mailto*" -github.com  -wikipedia.org -portswigger.net -magento
+/trust/report-a-vulnerability
+site:*.edu intext:security report vulnerability
+"cms" bug bounty
+"If you find a security issue"  "reward"
+"responsible disclosure" intext:"you may be eligible for monetary compensation"
+inurl: "responsible disclosure", "bug bounty", "bugbounty"
+responsible disclosure inurl:in
+site:*.br responsible disclosure
+site:*.at responsible disclosure
+site:*.be responsible disclosure
+site:*.au responsible disclosure
+List of Dorks
+I am not categorizing at the moment. Instead, I am going to just the list of dorks with a description. Many of the dorks can be modified to make the search more specific or generic. You can see more options here.
+
+Dork	Description
+filename:.npmrc _auth	npm registry authentication data
+filename:.dockercfg auth	docker registry authentication data
+extension:pem private	private keys
+extension:ppk private	puttygen private keys
+filename:id_rsa or filename:id_dsa	private ssh keys
+extension:sql mysql dump	mysql dump
+extension:sql mysql dump password	mysql dump look for password; you can try varieties
+filename:credentials aws_access_key_id	might return false negatives with dummy values
+filename:.s3cfg	might return false negatives with dummy values
+filename:wp-config.php	wordpress config files
+filename:.htpasswd	htpasswd files
+filename:.env DB_USERNAME NOT homestead	laravel .env (CI, various ruby based frameworks too)
+filename:.env MAIL_HOST=smtp.gmail.com	gmail smtp configuration (try different smtp services too)
+filename:.git-credentials	git credentials store, add NOT username for more valid results
+PT_TOKEN language:bash	pivotaltracker tokens
+filename:.bashrc password	search for passwords, etc. in .bashrc (try with .bash_profile too)
+filename:.bashrc mailchimp	variation of above (try more variations)
+filename:.bash_profile aws	aws access and secret keys
+rds.amazonaws.com password	Amazon RDS possible credentials
+extension:json api.forecast.io	try variations, find api keys/secrets
+extension:json mongolab.com	mongolab credentials in json configs
+extension:yaml mongolab.com	mongolab credentials in yaml configs (try with yml)
+jsforce extension:js conn.login	possible salesforce credentials in nodejs projects
+SF_USERNAME salesforce	possible salesforce credentials
+filename:.tugboat NOT _tugboat	Digital Ocean tugboat config
+HEROKU_API_KEY language:shell	Heroku api keys
+HEROKU_API_KEY language:json	Heroku api keys in json files
+filename:.netrc password	netrc that possibly holds sensitive credentials
+filename:_netrc password	netrc that possibly holds sensitive credentials
+filename:hub oauth_token	hub config that stores github tokens
+filename:robomongo.json	mongodb credentials file used by robomongo
+filename:filezilla.xml Pass	filezilla config file with possible user/pass to ftp
+filename:recentservers.xml Pass	filezilla config file with possible user/pass to ftp
+filename:config.json auths	docker registry authentication data
+filename:idea14.key	IntelliJ Idea 14 key, try variations for other versions
+filename:config irc_pass	possible IRC config
+filename:connections.xml	possible db connections configuration, try variations to be specific
+filename:express.conf path:.openshift	openshift config, only email and server thou
+filename:.pgpass	PostgreSQL file which can contain passwords
+filename:proftpdpasswd	Usernames and passwords of proftpd created by cpanel
+filename:ventrilo_srv.ini	Ventrilo configuration
+[WFClient] Password= extension:ica	WinFrame-Client infos needed by users to connect toCitrix Application Servers
+filename:server.cfg rcon password	Counter Strike RCON Passwords
+JEKYLL_GITHUB_TOKEN	Github tokens used for jekyll
+filename:.bash_history	Bash history file
+filename:.cshrc	RC file for csh shell
+filename:.history	history file (often used by many tools)
+filename:.sh_history	korn shell history
+filename:sshd_config	OpenSSH server config
+filename:dhcpd.conf	DHCP service config
+filename:prod.exs NOT prod.secret.exs	Phoenix prod configuration file
+filename:prod.secret.exs	Phoenix prod secret
+filename:configuration.php JConfig password	Joomla configuration file
+filename:config.php dbpasswd	PHP application database password (e.g., phpBB forum software)
+path:sites databases password	Drupal website database credentials
+shodan_api_key language:python	Shodan API keys (try other languages too)
+filename:shadow path:etc	Contains encrypted passwords and account information of new unix systems
+filename:passwd path:etc	Contains user account information including encrypted passwords of traditional unix systems
+extension:avastlic "support.avast.com"	Contains license keys for Avast! Antivirus
+filename:dbeaver-data-sources.xml	DBeaver config containing MySQL Credentials
+filename:.esmtprc password	esmtp configuration
+extension:json googleusercontent client_secret	OAuth credentials for accessing Google APIs
+HOMEBREW_GITHUB_API_TOKEN language:shell	Github token usually set by homebrew users
+xoxp OR xoxb	Slack bot and private tokens
+.mlab.com password	MLAB Hosted MongoDB Credentials
+filename:logins.json	Firefox saved password collection (key3.db usually in same repo)
+filename:CCCam.cfg	CCCam Server config file
+msg nickserv identify filename:config	Possible IRC login passwords
+filename:settings.py SECRET_KEY	Django secret keys (usually allows for session hijacking, RCE, etc)
+filename:secrets.yml password	Usernames/passwords, Rails applications
+filename:master.key path:config	Rails master key (used for decrypting credentials.yml.enc for Rails 5.2+)
+filename:deployment-config.json	Created by sftp-deployment for Atom, contains server details and credentials
+filename:.ftpconfig	Created by remote-ssh for Atom, contains SFTP/SSH server details and credentials
+filename:.remote-sync.json	Created by remote-sync for Atom, contains FTP and/or SCP/SFTP/SSH server details and credentials
+filename:sftp.json path:.vscode	Created by vscode-sftp for VSCode, contains SFTP/SSH server details and credentails
+filename:sftp-config.json	Created by SFTP for Sublime Text, contains FTP/FTPS or SFTP/SSH server details and credentials
+filename:WebServers.xml	Created by Jetbrains IDEs, contains webserver credentials with encoded passwords (not encrypted!)
+"api_hash" "api_id"	Telegram API token
+"https://hooks.slack.com/services/"	Slack services URL often have secret API token as a suffix
+filename:github-recovery-codes.txt	GitHub recovery key
+filename:gitlab-recovery-codes.txt	GitLab recovery key
+filename:discord_backup_codes.txt	Discord recovery key
+extension:yaml cloud.redislabs.com	Redis credentials provided by Redis Labs found in a YAML file
+extension:json cloud.redislabs.com	Redis credentials provided by Redis Labs found in a JSON file
